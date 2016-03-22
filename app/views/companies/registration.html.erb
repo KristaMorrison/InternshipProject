@@ -1,0 +1,45 @@
+<h2>Sign Up Your Company</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+
+  <div class="field">
+    <%= f.label :company_description %><br />
+    <%= f.company_description_field :company_description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.address_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zipcode %><br />
+    <%= f.zipcode_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div method="post" class="actions" action="confirmation">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%=render "companies/confirmation"%>
