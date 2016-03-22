@@ -6,5 +6,4 @@
     fill_in 'Password', with: 'Password'
     fill_in 'Password confirmation', with: 'Password'
     click_button 'Sign up'
-
   end
