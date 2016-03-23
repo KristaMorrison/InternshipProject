@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :students, controllers: {omniauth_callbacks: "omniauth_callbacks"}
 
-
   get 'students/show'
 
   # The priority is based upon order of creation: first created -> highest priority.
